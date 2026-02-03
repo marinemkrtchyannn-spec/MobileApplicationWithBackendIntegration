@@ -38,9 +38,6 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::IsOSPlatform('windows'))">10.0.17763.0</TargetPlatformMinVersion>
 		
 		<!-- Android specific settings -->
-		<!-- Support all common Android architectures for maximum compatibility -->
-		<AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
-		
 		<!-- Force XAML generation for all platforms including Android -->
 		<EnableDefaultMauiItems>true</EnableDefaultMauiItems>
 		
@@ -50,7 +47,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\myappicon.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />

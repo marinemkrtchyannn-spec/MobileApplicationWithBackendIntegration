@@ -65,7 +65,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"GET Request failed: {ex.Message}", "OK");
+                await DisplayAlertAsync("Error", $"GET Request failed: {ex.Message}", "OK");
                 RestResponseLabel.Text = $"Error: {ex.Message}";
             }
         }
@@ -110,7 +110,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"POST Request failed: {ex.Message}", "OK");
+                await DisplayAlertAsync("Error", $"POST Request failed: {ex.Message}", "OK");
                 RestResponseLabel.Text = $"Error: {ex.Message}";
             }
         }
@@ -132,7 +132,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"Connection failed: {ex.Message}", "OK");
+                await DisplayAlertAsync("Error", $"Connection failed: {ex.Message}", "OK");
             }
         }
 
@@ -148,7 +148,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"Disconnect failed: {ex.Message}", "OK");
+                await DisplayAlertAsync("Error", $"Disconnect failed: {ex.Message}", "OK");
             }
         }
 
@@ -158,7 +158,7 @@ namespace MyMobileApplication
             {
                 if (string.IsNullOrWhiteSpace(MessageEntry.Text))
                 {
-                    await DisplayAlert("Error", "Please enter a message", "OK");
+                    await DisplayAlertAsync("Error", "Please enter a message", "OK");
                     return;
                 }
 
@@ -168,7 +168,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"Send failed: {ex.Message}", "OK");
+                await DisplayAlertAsync("Error", $"Send failed: {ex.Message}", "OK");
             }
         }
 
@@ -254,7 +254,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Connection Error", ex.Message, "OK");
+                await DisplayAlertAsync("Connection Error", ex.Message, "OK");
                 AIConnectionStatusLabel.Text = "❌ Connection failed";
                 AIConnectionStatusLabel.TextColor = Colors.Red;
             }
@@ -271,7 +271,7 @@ namespace MyMobileApplication
             {
                 if (string.IsNullOrWhiteSpace(AIChatEntry.Text))
                 {
-                    await DisplayAlert("Error", "Please enter a message", "OK");
+                    await DisplayAlertAsync("Error", "Please enter a message", "OK");
                     return;
                 }
 
@@ -296,7 +296,7 @@ namespace MyMobileApplication
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlertAsync("Error", ex.Message, "OK");
                 AddAIMessage($"❌ Error: {ex.Message}");
             }
             finally
