@@ -6,7 +6,7 @@ namespace MyMobileApplication.Services
     public class AIService
     {
         private readonly HttpClient _httpClient;
-        private string _ollamaUrl = "http://192.168.1.100:11434"; // User will change this to their PC's IP
+        private string _ollamaUrl = "http://192.168.1.100:11434";
 
         public AIService()
         {
