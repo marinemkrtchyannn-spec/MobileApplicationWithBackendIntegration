@@ -126,7 +126,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- AI Chat Integration Section (Free - No API Key!) -->
+            <!-- AI Chat Integration Section -->
             <Frame BorderColor="DeepPink" CornerRadius="10" Padding="15" HasShadow="True">
                 <VerticalStackLayout Spacing="10">
                     <Label 
